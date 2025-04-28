@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-teal-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">SmartCity Hub</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-teal-200">Home</a>
+                <a href="#" class="hover:text-teal-200">Services</a>
+                <a href="#" class="hover:text-teal-200">About</a>
+                <a href="#" class="hover:text-teal-200">Contact</a>
+            </div>
+            <button class="md:hidden"><i class="bi bi-list text-2xl"></i></button>
+        </div>
+    </nav>
+
+    <!-- Emergency Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="tel:911" class="bg-red-600 text-white rounded-full p-4 flex items-center space-x-2 hover:bg-red-700 shadow-lg">
+            <i class="bi bi-telephone-fill"></i>
+            <span>Emergency</span>
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="bg-teal-500 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Smart City Management</h1>
+            <p class="text-xl mb-8">Managing your city services has never been easier</p>
+        </div>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Electricity Bill -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                <i class="bi bi-lightning-charge text-4xl text-yellow-500"></i>
+                <h3 class="text-xl font-semibold mt-4">Electricity Bill</h3>
+                <p class="text-gray-600 mt-2">Current Usage: 245 kWh</p>
+                <p class="text-gray-600">Estimated Bill: $125</p>
+                <button class="mt-4 bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">Pay Bill</button>
+            </div>
+
+            <!-- Water Bill -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                <i class="bi bi-droplet text-4xl text-blue-500"></i>
+                <h3 class="text-xl font-semibold mt-4">Water Bill</h3>
+                <p class="text-gray-600 mt-2">Current Usage: 150 Gallons</p>
+                <p class="text-gray-600">Estimated Bill: $75</p>
+                <button class="mt-4 bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">Pay Bill</button>
+            </div>
+
+            <!-- Traffic Control -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                <i class="bi bi-traffic-cone text-4xl text-orange-500"></i>
+                <h3 class="text-xl font-semibold mt-4">Traffic Status</h3>
+                <p class="text-gray-600 mt-2">Current Flow: Moderate</p>
+                <p class="text-gray-600">Major Delays: None</p>
+                <button class="mt-4 bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">View Map</button>
+            </div>
+
+            <!-- Location Tracking -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                <i class="bi bi-geo-alt text-4xl text-red-500"></i>
+                <h3 class="text-xl font-semibold mt-4">Location Services</h3>
+                <p class="text-gray-600 mt-2">Track public transport</p>
+                <p class="text-gray-600">Find nearest facilities</p>
+                <button class="mt-4 bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">Track Now</button>
+            </div>
+
+            <!-- Police Helpline -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                <i class="bi bi-shield text-4xl text-blue-700"></i>
+                <h3 class="text-xl font-semibold mt-4">Police Helpline</h3>
+                <p class="text-gray-600 mt-2">Emergency: 911</p>
+                <p class="text-gray-600">Non-Emergency: 311</p>
+                <button onclick="window.location.href='tel:911'" class="mt-4 bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">Call Police</button>
+            </div>
+
+            <!-- Waste Management -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-md">
+                <i class="bi bi-trash text-4xl text-green-600"></i>
+                <h3 class="text-xl font-semibold mt-4">Waste Management</h3>
+                <p class="text-gray-600 mt-2">Next Pickup: Tomorrow</p>
+                <p class="text-gray-600">Recycling Day: Wednesday</p>
+                <button class="mt-4 bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">Schedule Pickup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-teal-600 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
+                    <p>Emergency: 911</p>
+                    <p>Email: support@smartcity.com</p>
+                    <p>Address: 123 Smart Street</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+                    <ul>
+                        <li><a href="#" class="hover:text-teal-200">Services</a></li>
+                        <li><a href="#" class="hover:text-teal-200">About Us</a></li>
+                        <li><a href="#" class="hover:text-teal-200">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-teal-200"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="hover:text-teal-200"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="hover:text-teal-200"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p>&copy; 2024 SmartCity Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            const menu = document.querySelector('.md\\:flex');
+            menu.classList.toggle('hidden');
+        });
+
+        // Simulated real-time updates
+        setInterval(() => {
+            const usage = Math.floor(Math.random() * 50 + 200);
+            const bill = Math.floor(usage * 0.5);
+            document.querySelector('.service-card:first-child p:first-of-type').textContent = `Current Usage: ${usage} kWh`;
+            document.querySelector('.service-card:first-child p:last-of-type').textContent = `Estimated Bill: $${bill}`;
+        }, 5000);
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
